@@ -1,5 +1,6 @@
 const { Options } = require('@friggframework/integrations');
 const SalesforceManager = require('./entities/SalesforceManager');
+const HubspotManager = require('./entities/HubspotManager');
 const ConnectWiseManager = require('./entities/ConnectWiseManager');
 
 // Entities that we are going to use for integration for this particular app
@@ -16,6 +17,17 @@ class IntegrationConfigManager {
                     category: 'Sales & CRM',
                     detailsUrl: 'https://salesforce.com',
                     icon: 'https://friggframework.org/assets/img/salesforce.jpeg',
+                },
+            }),
+            new Options({
+                module: HubspotManager,
+                integrations: [ConnectWiseManager],
+                display: {
+                    name: 'Hubspot',
+                    description: 'My Description',
+                    category: 'My Category',
+                    detailsUrl: 'https://hubspot.com',
+                    icon: 'https://friggframework.org/assets/img/hubspot.jpeg',
                 },
             }),
         ];
