@@ -7,7 +7,6 @@ class IntegrationConfigManager {
     constructor(params) {
         this.primary = ConnectWiseManager;
         this.options = [
-
             new Options({
                 module: SalesforceManager,
                 integrations: [ConnectWiseManager],
