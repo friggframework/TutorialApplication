@@ -1,6 +1,7 @@
 const { ModuleManager, Entity } = require('@friggframework/module-plugin');
 const primaryEntity = require('./ConnectWiseManager');
 const salesforceEntity = require('./SalesforceManager');
+const hubspotEntity = require('./HubspotManager');
 
 
 class EntityManager {
@@ -9,6 +10,7 @@ class EntityManager {
     static entityManagerClasses = [
         primaryEntity,
         salesforceEntity,
+        hubspotEntity
     ];
 
     static entityTypes = EntityManager.entityManagerClasses.map(
